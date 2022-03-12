@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div className='border'>
 
-<h1 style={{color: 'red'} }>Bad_Apps Ranch</h1>
+<h1 style={{color: 'red'} }>Bad-Apps Ranch</h1>
       <p>Welcome to our Ranch. At our Ranch you can buy any animal you want. Come join our community of Ranches and you will have access to any of the animals we have available.</p>
       <h2 style={{color: 'orange'} }>Austin</h2>
       <p> Austin got a new game yesterday, but is waiting until 5:31pm today to play it.</p>
