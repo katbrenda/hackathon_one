@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Ranches from "./pages/Ranches"
 import Jobs from "./pages/Jobs"
 import RanchShow from "./pages/RanchShow"
+import Ranch from "./components/Ranch"
 import RanchForm from './pages/RanchForm'
 
 
