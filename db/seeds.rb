@@ -12,12 +12,18 @@
 # ranch crass
 
 Ranch.destroy_all
+Job.destroy_all
 
 
 r1 = Ranch.create(name: "Crass Ranch")
 r2 = Ranch.create(name: "Gaylord Ranch")
 r3 = Ranch.create(name: "Hefner Ranch")
 r4 = Ranch.create(name: "Kilgore Ranch")
+
+j1 = Job.create(kind: "Ranch Hand")
+j2 = Job.create(kind: "Animal Specialist")
+j3 = Job.create(kind: "Assistant Pooper Scooper")
+j4 = Job.create(kind: "Environmental Technician")
 
 r1.animals.create(kind: "Horse",price: 13076)
 r1.animals.create(kind: "Elephant",price: 6049)
@@ -43,3 +49,4 @@ r4.animals.create(kind: "giganotosaurus",price: 999999999)
 puts "database seeded"
 puts "Ranches: #{Ranch.all.count}"
 puts "Animals: #{Animal.all.count}"
+puts "Jobs: #{Job.all.count}"
