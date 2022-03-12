@@ -10,6 +10,7 @@ import Ranches from "./pages/Ranches"
 import Jobs from "./pages/Jobs"
 import RanchShow from "./pages/RanchShow"
 import Ranch from "./components/Ranch"
+import RanchForm from './pages/RanchForm'
 
 
 ReactDOM.render(
@@ -19,7 +20,8 @@ ReactDOM.render(
         <Route index element={<Home />} /> 
         <Route path='about' element={<About />} />
         <Route path='ranches' element={<Ranches />} />
-        <Route path='ranch/:id' element={<Ranch />} />
+        <Route path='ranches/:id' element={<RanchShow />} />
+        <Route path='ranches/new' element={<RanchForm />} />
         <Route path='jobs' element={<Jobs />} />
       </Route>
     </Routes>
