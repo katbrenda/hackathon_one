@@ -1,10 +1,11 @@
 import React from 'react'
 
-const Animal = () => {
+const Animal = (props) => {
 
   return (
     <div className='border'>
-      <h1>Animal</h1>
+      <h1>Name: {props.kind}</h1>
+      <p>ID: {props.id}</p>
     </div>
   )
 }
