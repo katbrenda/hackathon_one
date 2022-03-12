@@ -25,7 +25,7 @@ const Jobs = ()=>{
        })
     }
     return (
-        <div>
+        <div className='border'>
             <h1>Jobs</h1>
             <div>
                 {renderJobs()}
