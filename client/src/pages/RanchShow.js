@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation, useParams } from 'react-router-dom'
 import Animal from '../components/Animal'
-import AnimalForm from '../components/AnimalForm'
 import axios from 'axios'
 
 

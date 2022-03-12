@@ -11,7 +11,7 @@ const Ranch = (props) => {
   return (
     <div className="box">
       <p className='title'>{name}</p>
-     <Link className='button' to={`/ranches/:id`} state={{name, id}}>show</Link>
+     <Link className='button' to={`/ranches/${id}`} state={{name, id}}>show</Link>
       <button className='button' onClick={() => deleteRanch(id)}>delete</button>
       <button className='button' onClick={() =>navigate(`/ranches/${id}/edit`, { state: { name, id}})}>edit</button>
     </div>
