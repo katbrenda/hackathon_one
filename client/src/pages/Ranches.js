@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import Ranch from '../components/Ranch'
+
 
 const Ranches = () => {
   const navigate = useNavigate()
@@ -8,7 +10,7 @@ const Ranches = () => {
   useEffect(() => {
     console.log('Mounted & Doing API Call To Get Ranches')
     getRanches()
-  })
+  },[])
 
   const deleteRanch = async (id) => {
     await axios.delete(`/api/ranches/${id}`)
