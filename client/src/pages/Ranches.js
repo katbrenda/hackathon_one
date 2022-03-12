@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
-import RanchShow from './RanchShow'
+import Ranch from '../components/Ranch'
 
 const Ranches = () => {
   const navigate = useNavigate()
@@ -26,7 +26,7 @@ const Ranches = () => {
 
   const renderRanches = () => {
     return ranches.map(r => {
-      return <RanchShow key={r.id} {...r} deleteRanch={deleteRanch} />
+      return <Ranch key={r.id} {...r} deleteRanch={deleteRanch} />
     })
   }
 
