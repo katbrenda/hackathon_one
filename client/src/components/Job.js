@@ -7,7 +7,7 @@ const Job = (props) => {
   //const { name, id} = props;
 
   return (
-    <div className="border">
+    <div className="box">
      {/* <p>{props.name}</p> */}
       <p>{props.kind}</p>
      
