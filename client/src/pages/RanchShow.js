@@ -32,13 +32,21 @@ const RanchShow = () => {
     console.log('Ranch ID:', params.id)
     console.log('Animal ID:', id)
 
+    try {
     let res = await axios.get(`/api/ranches/${params.id}/animals`)
     setAnimals(res.data)
+    } catch (err) {
+      console.log('Error Deleting Animal')
+    }
   }
 
   const getAnimals = async () => {
+    try {
     let res = await axios.get(`/api/ranches/${params.id}/animals`)
     setAnimals(res.data)
+    } catch (err) {
+      alert ('Error Occurred Getting Animals')
+    }
   }
 
   const renderAnimals = () => {
@@ -53,6 +61,7 @@ const RanchShow = () => {
       <h1>{location.state.name}</h1>
       <h3>ID: {params.id}</h3>
       <h1>Animals:</h1>
+      {/* Do we want this here? */}
       {/* <AnimalForm addAnimal={addAnimal} /> */}
       {renderAnimals()}
       <p>{JSON.stringify(animals)}</p>
