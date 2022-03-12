@@ -34,9 +34,9 @@ const RanchForm = () => {
     
       <h1>{params.id ? "Edit" : "New"} RanchForm</h1>
       <form onSubmit={handleSubmit}>
-        <p>Name</p>
+        <h2 className='ranches'>Name</h2>
         <input value={name} onChange={(e) => setName(e.target.value)} />
-        <button>{params.id ? "Update" : "Create"}</button>
+        <button className='button'>{params.id ? "Update" : "Create"}</button>
       </form>
     </div>
   )
