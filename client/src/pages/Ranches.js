@@ -30,7 +30,7 @@ const Ranches = () => {
 
   return (
     <div className='border'>
-      <h1>Ranches</h1>
+      <h1 className='ranches_heading'>Ranches</h1>
       <button onClick={() => navigate('/ranches/new')}>new</button>
       <div>
         {renderRanches()}

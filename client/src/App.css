@@ -129,3 +129,7 @@ transition: 0.4s;
 .button:hover {
 color: rgb(27, 28, 94);
 background-color: rgb(221, 189, 84);}
+
+.ranches_heading{
+display: center;
+}
