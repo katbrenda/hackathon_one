@@ -42,7 +42,7 @@ const RanchShow = () => {
   }
 
   const renderAnimals = () => {
-    return animals.map(a => <Animal deleteAnimal={deleteAnimal} key={a.id} {...a} updateAnimal={updateAnimal}/>)
+    return animals.map(a => <Animal deleteAnimal={deleteAnimal} key={a.id} {...a}/>)
   }
 
   const params = useParams()
@@ -52,7 +52,7 @@ const RanchShow = () => {
     <div className='border'>
       <h1>{location.state.name}</h1>
       <h3>ID: {params.id}</h3>
-      <h1>Animals:</h1>
+      <h1>Animals:{}</h1>
       {/* <AnimalForm addAnimal={addAnimal} /> */}
       {renderAnimals()}
       <p>{JSON.stringify(animals)}</p>
