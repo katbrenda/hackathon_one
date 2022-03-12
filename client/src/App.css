@@ -103,3 +103,5 @@ transition: all ease-in-out 250ms;
 nav a:hover::before {
 width: 100%;
 }
+h1 {
+font-family: 'Skranji', cursive; ;}

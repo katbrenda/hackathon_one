@@ -5,6 +5,7 @@ const About = () => {
   return (
     <div className='border'>
       <h1>About</h1>
+      
     </div>
   )
 }
