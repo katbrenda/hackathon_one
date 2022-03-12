@@ -25,6 +25,7 @@ ReactDOM.render(
         <Route path='ranches/:id' element={<RanchShow />} />
         <Route path='ranches/new' element={<RanchForm />} />
         <Route path='jobs' element={<Jobs />} />
+        <Route path='ranches/:id/edit' element={<RanchForm/>}/>
       </Route>
     </Routes>
   </BrowserRouter>
