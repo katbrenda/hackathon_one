@@ -3,13 +3,14 @@ import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import Ranch from '../components/Ranch'
 
+
 const Ranches = () => {
   const navigate = useNavigate()
-  const [ranches,setRanches] = useState([])
+  const [ranches, setRanches] = useState([])
   useEffect(() => {
     console.log('Mounted & Doing API Call To Get Ranches')
     getRanches()
-  }, [])
+  },[])
 
   const deleteRanch = async (id) => {
     await axios.delete(`/api/ranches/${id}`)
@@ -23,21 +24,22 @@ const Ranches = () => {
   }
 
   const renderRanches = () => {
-    return ranches.map(r => {
-      return <Ranch key={r.id} {...r} deleteRanch={deleteRanch} />
+    return ranches.map(r=> {
+        return <Ranch key={r.id} {...r} deleteRanch={deleteRanch}/>
     })
-  }
+ }
 
   return (
     <div className='border'>
-      <h1 className='ranches_heading'>Ranches</h1>
-      <button onClick={() => navigate('/ranches/new')}>new</button>
-      <div>
+      <h1 className='title'>Ranches</h1>
+      <button className='button' onClick={() => navigate('/ranches/new')}>new</button>
+      <div className='ranches'>
         {renderRanches()}
       </div>
       <p>{JSON.stringify(ranches)}</p>
     </div>
   )
 }
+
 
 export default Ranches

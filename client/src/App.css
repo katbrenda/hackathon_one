@@ -130,6 +130,11 @@ transition: 0.4s;
 color: rgb(27, 28, 94);
 background-color: rgb(221, 189, 84);}
 
-.ranches_heading{
+.ranches{
 display: center;
+font-family: 'Skranji', cursive;
+}
+.title {
+font-family: 'Skranji', cursive;
+font-size: 30px;
 }
