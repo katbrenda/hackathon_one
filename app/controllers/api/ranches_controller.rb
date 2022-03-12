@@ -1,5 +1,4 @@
 class Api::RanchesController < ApplicationController
-# PRETENT THIS WAS JUST DONE AS WELLL. BY SALLY
 before_action :set_ranch, only: [:update, :show, :destroy]
 
 def index
