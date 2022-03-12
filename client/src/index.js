@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Ranches from "./pages/Ranches"
 import Jobs from "./pages/Jobs"
 import RanchShow from "./pages/RanchShow"
+import Ranch from "./components/Ranch"
 
 
 ReactDOM.render(
@@ -18,7 +19,7 @@ ReactDOM.render(
         <Route index element={<Home />} /> 
         <Route path='about' element={<About />} />
         <Route path='ranches' element={<Ranches />} />
-        <Route path='ranch' element={<RanchShow />} />
+        <Route path='ranch/:id' element={<Ranch />} />
         <Route path='jobs' element={<Jobs />} />
       </Route>
     </Routes>
