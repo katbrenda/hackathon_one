@@ -1,17 +1,21 @@
 import React from 'react'
-
-
-
+import { DataContext } from '../providers/DataProvider'
+import {Link, Outlet} from 'react-router-dom'
+import Ranches from './Ranches'
 
 
 const Home = () => {
 
   return (
-    <div className='border'>
+    <div className='home_div'>
       <h1>Home</h1>
-      <button>RANCHES</button>
-      <button>ABOUT</button>
-      <button>JOBS</button>
+        <Link className='button' to='/'>Home</Link> {' '}
+        <Link className='button' to='/ranches'>Ranches</Link>  {' '}
+        <Link className='button' to='/about'>About</Link>  {' '}
+        <Link className='button' to='/jobs'>Jobs</Link> {' '}
+      
+      
+      
     </div>
   )
 }
