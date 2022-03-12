@@ -1,10 +1,10 @@
-import React, { useContext, useState } from 'react'
-import { useLocation, useNavigate, useParams } from 'react-router-dom'
-import { DataContext } from '../providers/DataProvider'
-import axios from 'axios'
+import React, { useContext, useState } from "react";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { DataContext } from "../providers/DataProvider";
+import axios from "axios";
 
 const RanchForm = () => {
-  const {addRanch} = useContext(DataContext)
+  const { addRanch } = useContext(DataContext);
   const navigate = useNavigate();
   const location = useLocation();
   const [name, setName] = useState(location.state ? location.state.name : "");
@@ -15,12 +15,13 @@ const RanchForm = () => {
     try {
       if (params.id) {
         await axios.put(`/api/ranches/${params.id}`, {
-          name, id: params.id,
+          name,
+          id: params.id,
         });
       } else {
         let res = await axios.post(`/api/ranches`, { name });
-        console.log('res.data:', res.data)
-        addRanch(res.data)
+        console.log("res.data:", res.data);
+        addRanch(res.data);
       }
       navigate("/ranches");
     } catch (err) {
@@ -28,18 +29,27 @@ const RanchForm = () => {
     }
   };
 
+  const EditRanch = (props) => {
+    const [name, setName] = useState(props.name);
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      let updatedRanch = { id: props.name };
+      console.log(updatedRanch);
+      props.updateRanch(updatedRanch);
+      setName("");
+    };
+  };
 
   return (
-    <div className='border'>
-    
+    <div className="border">
       <h1>{params.id ? "Edit" : "New"} RanchForm</h1>
       <form onSubmit={handleSubmit}>
-        <h2 className='ranches'>Name</h2>
+        <h2 className="ranches">Name</h2>
         <input value={name} onChange={(e) => setName(e.target.value)} />
-        <button className='button'>{params.id ? "Update" : "Create"}</button>
+        <button className="button">{params.id ? "Update" : "Create"}</button>
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default RanchForm
+export default RanchForm;

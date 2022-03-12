@@ -50,7 +50,7 @@ const RanchShow = () => {
   }
 
   const renderAnimals = () => {
-    return animals.map(a => <Animal deleteAnimal={deleteAnimal} key={a.id} {...a} updateAnimal={updateAnimal}/>)
+    return animals.map(a => <Animal deleteAnimal={deleteAnimal} key={a.id} {...a}/>)
   }
 
   const params = useParams()
