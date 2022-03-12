@@ -9,7 +9,6 @@ const Home = () => {
   return (
     <div className='home_div'>
       <h1>Home</h1>
-        <Link className='button' to='/'>Home</Link> {' '}
         <Link className='button' to='/ranches'>Ranches</Link>  {' '}
         <Link className='button' to='/about'>About</Link>  {' '}
         <Link className='button' to='/jobs'>Jobs</Link> {' '}
