@@ -9,7 +9,7 @@ const Ranches = () => {
   useEffect(() => {
     console.log('Mounted & Doing API Call To Get Ranches')
     getRanches()
-  })
+  }, [])
 
   const deleteRanch = async (id) => {
     await axios.delete(`/api/ranches/${id}`)
@@ -21,8 +21,6 @@ const Ranches = () => {
     let res = await axios.get('/api/ranches')
     setRanches(res.data)
   }
-
- 
 
   const renderRanches = () => {
     return ranches.map(r => {
