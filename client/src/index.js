@@ -11,9 +11,11 @@ import Jobs from "./pages/Jobs"
 import RanchShow from "./pages/RanchShow"
 import Ranch from "./components/Ranch"
 import RanchForm from './pages/RanchForm'
+import DataProvider from './providers/DataProvider';
 
 
 ReactDOM.render(
+  <DataProvider>
   <BrowserRouter>
     <Routes>
       <Route path='/' element={<App />}> 
@@ -25,7 +27,8 @@ ReactDOM.render(
         <Route path='jobs' element={<Jobs />} />
       </Route>
     </Routes>
-  </BrowserRouter>,
+  </BrowserRouter>
+  </DataProvider>,
     document.getElementById("root")
 );
 

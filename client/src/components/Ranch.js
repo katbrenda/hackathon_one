@@ -10,10 +10,10 @@ const Ranch = (props) => {
 
   return (
     <div className="border">
-      <p>{name}</p>
-     <Link to={`/ranches/${id}`} state={{name, id}}>show</Link>
-      <button onClick={() => deleteRanch(id)}>delete</button>
-      <button onClick={() =>navigate(`/ranches/${id}/edit`, { state: { name, id}})}>edit</button>
+      <p className='title'>{name}</p>
+     <Link className='button' to={`/ranches/:id`} state={{name, id}}>show</Link>
+      <button className='button' onClick={() => deleteRanch(id)}>delete</button>
+      <button className='button' onClick={() =>navigate(`/ranches/${id}/edit`, { state: { name, id}})}>edit</button>
     </div>
   )
 }

@@ -31,14 +31,15 @@ const Ranches = () => {
 
   return (
     <div className='border'>
-            <h1>Ranches</h1>
-            <button onClick={()=>navigate('/ranches/new')}>new</button>
-            <div>
-                {renderRanches()}
-            </div>
-            <p>{JSON.stringify(ranches)}</p>
-        </div>
+      <h1 className='title'>Ranches</h1>
+      <button className='button' onClick={() => navigate('/ranches/new')}>new</button>
+      <div className='ranches'>
+        {renderRanches()}
+      </div>
+      <p>{JSON.stringify(ranches)}</p>
+    </div>
   )
 }
+
 
 export default Ranches
